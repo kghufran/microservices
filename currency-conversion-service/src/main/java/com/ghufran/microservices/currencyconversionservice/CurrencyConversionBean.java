@@ -10,13 +10,14 @@ public class CurrencyConversionBean {
 	private BigDecimal amount;
 	private BigDecimal calculatedAmount;
 	private int port;
+	private int ccport;
 	
 	public CurrencyConversionBean() {
 		
 	}
 	
 	public CurrencyConversionBean(Long id, String from, String to, BigDecimal conversionFactor, BigDecimal amount,
-			BigDecimal calculatedAmount, int port) {
+			BigDecimal calculatedAmount, int port, int ccport) {
 		super();
 		this.id = id;
 		this.from = from;
@@ -25,6 +26,7 @@ public class CurrencyConversionBean {
 		this.amount = amount;
 		this.calculatedAmount = calculatedAmount;
 		this.port = port;
+		this.ccport = ccport;
 	}
 	public String getFrom() {
 		return from;
@@ -67,6 +69,14 @@ public class CurrencyConversionBean {
 	}
 	public void setPort(int port) {
 		this.port = port;
+	}
+
+	public int getCcport() {
+		return ccport;
+	}
+
+	public void setCcport(int ccport) {
+		this.ccport = ccport;
 	}
 	
 }
